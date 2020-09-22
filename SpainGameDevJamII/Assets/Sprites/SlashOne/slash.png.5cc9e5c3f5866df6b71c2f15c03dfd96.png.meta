@@ -1,0 +1,263 @@
+fileFormatVersion: 2
+guid: e1dbe0817aa26e343be32edd12e778c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2251225171852352927
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_0
+  - first:
+      213: -5606465764966233307
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_1
+  - first:
+      213: -4739562864519251690
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_2
+  - first:
+      213: 6664361066707803858
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_3
+  - first:
+      213: 3229905262479992581
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_4
+  - first:
+      213: 3891781565963377752
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_5
+  - first:
+      213: 1233918596996026272
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_6
+  - first:
+      213: 3868554055198695557
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_7
+  - first:
+      213: -2211185283167831359
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_8
+  - first:
+      213: 6756736434778618386
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_9
+  - first:
+      213: 2862342944775947834
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_10
+  - first:
+      213: -8908071505492083871
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_11
+  - first:
+      213: -689144123996322008
+    second: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162a25a32aa02c0e0800000000000000
+      internalID: -2251225171852352927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61972bd9fa0b93eb0800000000000000
+      internalID: -4739562864519251690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_4
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507e84439bde2dc20800000000000000
+      internalID: 3229905262479992581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash.png.5cc9e5c3f5866df6b71c2f15c03dfd96_5
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c19a6f6b2620630800000000000000
+      internalID: 3891781565963377752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: dae6768479d57544e928967af13a56a7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
