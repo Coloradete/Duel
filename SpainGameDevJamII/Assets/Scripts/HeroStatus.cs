@@ -5,19 +5,28 @@ public class HeroStatus : MonoBehaviour
 {
     public CharacterStats heroStats;
     private int currentHealth;
+    private float gotHitCooldown;
 
     private void Awake()
     {
         currentHealth = heroStats.Health;
     }
 
+    private void Update()
+    {
+        gotHitCooldown -= Time.deltaTime;
+    }
     public void HeroGotHit(int damage)
     {
-        currentHealth -= damage;
-        AudioManager.instance.HeroGotHit();
-        if(currentHealth <= 0)
+        if(gotHitCooldown <= 0f)
         {
-            HeroDeath();
+            currentHealth -= damage;
+            AudioManager.instance.HeroGotHit();
+            if (currentHealth <= 0)
+            {
+                HeroDeath();
+            }
+            gotHitCooldown = 0.25f;
         }
     }
 

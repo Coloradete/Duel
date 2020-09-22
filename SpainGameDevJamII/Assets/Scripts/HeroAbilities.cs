@@ -68,6 +68,7 @@ public class HeroAbilities : MonoBehaviour
             attackTwoHolder.transform.localPosition = attackPosition * attackTwoDistance;
             attackTwoHolder.SetActive(true);
             AudioManager.instance.HeroSlashAttack();
+            AudioManager.instance.HeroProjectile();
             yield return new WaitForSeconds(attackTwoTimeActive);
             attackTwoHolder.SetActive(false);
             yield return new WaitForSeconds(attackTwoCooldown);

@@ -16,30 +16,8 @@ public class Sound //Clase creada para los sonidos
 
 public class AudioManager : MonoBehaviour //Administra todos los sonidos del juego
 {
-    public static AudioManager instance
-    {
-        get
-        {
-            if (instance == null) //Chequeamos que existe un único AudioManager
-            {
-                instance = GameObject.FindGameObjectWithTag("AudioManager")?.GetComponent<AudioManager>();
+    public static AudioManager instance;
 
-                if (instance == null)
-                {
-                    instance = new GameObject("Spawned AudioManager", typeof(AudioManager)).GetComponent<AudioManager>();
-                }
-
-                instance.InitSounds();
-            }
-
-            return instance;
-        }
-
-        private set
-        {
-            instance = value;
-        }
-    }
 
     #region Sound files
 

@@ -9,7 +9,6 @@ public class DistanceSlash : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(DisableGameObject());
-        AudioManager.instance.HeroProjectile();
     }
 
     private void OnTriggerEnter(Collider other)

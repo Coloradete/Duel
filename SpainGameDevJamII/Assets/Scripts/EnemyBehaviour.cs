@@ -11,8 +11,9 @@ public class EnemyBehaviour : MonoBehaviour
     private Vector3 movementDirection;
 
     [SerializeField] private GameObject enemyAttack;
+    [SerializeField] private GameObject gotHitEffect;
     [SerializeField] private float attackDistance;
-    private float currentAttackCooldown;
+    private float currentAttackCooldown, gotHitCooldown;
     private int currentHealth;
 
     private bool isMoving = true, isAttacking;
@@ -31,6 +32,9 @@ public class EnemyBehaviour : MonoBehaviour
         if(isMoving && !isAttacking)
             rBody.velocity = movementDirection * enemyStats.RunSpeed * Time.deltaTime;
         currentAttackCooldown -= Time.deltaTime;
+        gotHitCooldown -= Time.deltaTime;
+        if(gotHitCooldown <= 0f)
+            gotHitEffect.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -81,14 +85,18 @@ public class EnemyBehaviour : MonoBehaviour
     }
     public void EnemyGotHit(int damage)
     {
-        currentHealth -= damage;
-        AudioManager.instance.EnemyGotHit(enemyStats.RawName);
-        if(currentHealth <= 0)
+        if (gotHitCooldown <= 0f)
         {
-            EnemyDeath();
+            currentHealth -= damage;
+            AudioManager.instance.EnemyGotHit(enemyStats.RawName);
+            gotHitEffect.SetActive(true);
+            if (currentHealth <= 0)
+            {
+                EnemyDeath();
+            }
+            gotHitCooldown = 0.25f;
         }
     }
-
     private void EnemyDeath()
     {
         gameObject.SetActive(false);
