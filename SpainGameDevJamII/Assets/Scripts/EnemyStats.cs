@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CharacterName
+public enum EnemyName
 {
-    Hero,
     Slime
 }
-[CreateAssetMenu(fileName = "NewCharacter", menuName = "Character")]
-public class CharacterStats : ScriptableObject
+[CreateAssetMenu(fileName = "NewEnemy", menuName = "Enemy")]
+public class EnemyStats : ScriptableObject
 {
-    [SerializeField] new CharacterName name;
+    [SerializeField] new EnemyName name;
     [SerializeField] int health, regularAttackDamage;
     [SerializeField] float buildup, recoil, regularAttackCooldown, runSpeed;
 
     public string Name => name.ToString();
-    public CharacterName RawName => name;
+    public EnemyName RawName => name;
     public int Health => health;
     public int RegularAttackDamage => regularAttackDamage;
     public float Buildup => buildup;

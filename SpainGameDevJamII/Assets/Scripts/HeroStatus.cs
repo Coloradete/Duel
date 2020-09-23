@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 public class HeroStatus : MonoBehaviour
 {
-    public CharacterStats heroStats;
-    private int currentHealth;
+    [SerializeField] private int maxHealth;
+    [HideInInspector] public int currentHealth { get; private set; }
     private float gotHitCooldown;
 
     private void Awake()
     {
-        currentHealth = heroStats.Health;
+        currentHealth = maxHealth;
     }
 
     private void Update()
@@ -22,6 +22,7 @@ public class HeroStatus : MonoBehaviour
         {
             currentHealth -= damage;
             AudioManager.instance.HeroGotHit();
+            UIHeroCanvasManager.instance.UpdateHealth(currentHealth);
             if (currentHealth <= 0)
             {
                 HeroDeath();

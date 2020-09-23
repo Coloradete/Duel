@@ -11,7 +11,7 @@ public class HeroMovement : MonoBehaviour
     private Vector3 movementDirection, lastNonZeroDirection;
 
     private bool isDashing;
-    [SerializeField] private float dashVelocity, dashingTime;
+    [SerializeField] private float dashVelocity, dashingTime, runSpeed;
 
     private Rigidbody rBody;
     private HeroStatus heroStatus;
@@ -60,7 +60,7 @@ public class HeroMovement : MonoBehaviour
     private void Move()
     {
         if(!isDashing)
-            rBody.velocity = movementDirection * heroStatus.heroStats.RunSpeed * Time.deltaTime;
+            rBody.velocity = movementDirection * runSpeed * Time.deltaTime;
         UpdateAnimation();
     }
 

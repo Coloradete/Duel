@@ -149,22 +149,22 @@ public class AudioManager : MonoBehaviour //Administra todos los sonidos del jue
     {
         PlayEffect(heroProjectile);
     }
-    public void EnemyGotHit(CharacterName characterName)
+    public void EnemyGotHit(EnemyName enemyName)
     {
-        switch (characterName)
+        switch (enemyName)
         {
-            case CharacterName.Slime:
+            case EnemyName.Slime:
             {
                 PlayEffect(slimeGotHit);
                     break;
             }
         }
     }
-    public void EnemyAttack(CharacterName characterName)
+    public void EnemyAttack(EnemyName enemyName)
     {
-        switch (characterName)
+        switch (enemyName)
         {
-            case CharacterName.Slime:
+            case EnemyName.Slime:
                 {
                     PlayEffect(slimeAttack);
                     break;

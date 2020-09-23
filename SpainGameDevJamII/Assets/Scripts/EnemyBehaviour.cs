@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public CharacterStats enemyStats;
+    public EnemyStats enemyStats;
     private HeroStatus hero;
 
     private Rigidbody rBody;
@@ -99,6 +99,7 @@ public class EnemyBehaviour : MonoBehaviour
     }
     private void EnemyDeath()
     {
+        GhostsManager.instance.AddEnemyToGhostList(enemyStats.RawName);
         gameObject.SetActive(false);
     }
 

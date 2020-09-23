@@ -1,29 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using System;
 
 public class ObjectsPool : MonoBehaviour
 {
-    [SerializeField] private GameObject objectToPool;
-    [SerializeField] private int poolSize;
-    private int currentSpawnedObject;
-    private GameObject[] gameObjectsPool;
+    [SerializeField] private GameObject[] objectsToPool;
+    [SerializeField] private int[] objectPoolSize;
+    private int[] currentSpawnedObject;
+    private GameObject[][] gameObjectsPool;
 
     private void Awake()
     {
-        gameObjectsPool = new GameObject[poolSize];
-        for(int i = 0; i < poolSize; i++)
+        for(int i = 0; i < objectsToPool.Length; i++)
         {
-            gameObjectsPool[i] = Instantiate(objectToPool, transform.position, Quaternion.identity);
-            gameObjectsPool[i].SetActive(false);
+            gameObjectsPool = new GameObject[objectsToPool.Length][];
+            for (int k = 0; k < objectPoolSize.Max(); k++)
+            {
+                gameObjectsPool[i][k] = Instantiate(objectsToPool[i], transform.position, Quaternion.identity);
+                gameObjectsPool[i][k].SetActive(false);
+            }
         }
     }
-    public GameObject GetNextPoolObject()
+    private void Start()
     {
-        currentSpawnedObject++;
-        if (currentSpawnedObject >= poolSize)
-            currentSpawnedObject = 0;
-        gameObjectsPool[currentSpawnedObject].SetActive(true);
-        return gameObjectsPool[currentSpawnedObject];
+        currentSpawnedObject = new int[objectPoolSize.Length];
+    }
+    void OnValidate()
+    {
+        if (objectPoolSize.Length != objectsToPool.Length)
+        {
+            Debug.LogWarning("Don't change the 'objectsPoolSize' field's array size!");
+            Array.Resize(ref objectPoolSize, objectsToPool.Length);
+        }
+    }
+    public GameObject GetNextPoolObject(int index)
+    {
+        currentSpawnedObject[index]++;
+        if (currentSpawnedObject[index] >= objectPoolSize[index])
+            currentSpawnedObject[index] = 0;
+        gameObjectsPool[index][currentSpawnedObject[index]].SetActive(true);
+        return gameObjectsPool[index][currentSpawnedObject[index]];
     }
 }

@@ -15,7 +15,7 @@ public class AttackTwo : MonoBehaviour
     }
     private void OnEnable()
     {
-        GameObject projectile = objectsPool.GetNextPoolObject();
+        GameObject projectile = objectsPool.GetNextPoolObject(0);
         projectile.transform.position = transform.position;
         projectile.GetComponent<Rigidbody>().velocity = heroMovement.GetMovementDirection() * projectileSpeed;
     }
